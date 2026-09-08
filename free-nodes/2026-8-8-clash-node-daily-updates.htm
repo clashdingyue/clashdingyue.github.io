@@ -342,14 +342,9 @@ sudo sysctl net.ipv4.tcp_congestion_control=bbr
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Hiddify Next 如何设置用户带宽与流量配额？</h5></div>
+    <div class="panel-heading"><h5>Sing-box 是什么？</h5></div>
     <div class="panel-body">
-        管理员可为每个用户单独设置带宽和流量上限。超出限制时，可自动降速或阻止访问，确保服务器资源合理分配，避免单用户占用过多带宽，提高整体网络公平性和效率。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>VLESS + Reality 模式与 TLS 模式有何不同？</h5></div>
-    <div class="panel-body">
-        Reality 模式通过伪造握手和真实网站特征提升隐蔽性，TLS 模式侧重加密和传输效率。Reality 更难被 DPI 检测，适合高封锁环境，TLS 模式在稳定性和速度上更优。<hr />    </div>
+        Sing-box 是新一代多协议代理框架，支持 VMess、VLess、Trojan、Hysteria、ShadowTLS 等协议。它比传统 V2Ray 更轻量化、模块化，并针对移动端和 Linux 系统进行了性能优化，受到开发者和高级用户的欢迎。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Shadowrocket 的日志界面怎么看节点状态？</h5></div>
@@ -357,19 +352,9 @@ sudo sysctl net.ipv4.tcp_congestion_control=bbr
         Shadowrocket 的日志界面实时显示连接记录与节点响应延迟。绿色代表成功连接，红色代表失败，通过查看错误码可判断是 DNS 问题、TLS 握手失败还是代理超时。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess AEAD 加密在高封锁网络的作用？</h5></div>
+    <div class="panel-heading"><h5>何为 fake-ip 模式，它的优缺点是什么？</h5></div>
     <div class="panel-body">
-        AEAD 加密可防止数据篡改和流量特征泄露，降低被封锁和 DPI 检测风险。保证节点长期可用，提高数据传输安全性和访问可靠性，优化用户科学上网体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>VLESS 的 XTLS 模式能提升传输效率吗？</h5></div>
-    <div class="panel-body">
-        XTLS 模式通过减少冗余加密和握手次数，降低延迟，提高吞吐量。在高并发和短连接场景下，效率明显优于普通 TLS，同时保持数据安全性和隐蔽性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 是什么？</h5></div>
-    <div class="panel-body">
-        Sing-box 是新一代多协议代理框架，支持 VMess、VLess、Trojan、Hysteria、ShadowTLS 等协议。它比传统 V2Ray 更轻量化、模块化，并针对移动端和 Linux 系统进行了性能优化，受到开发者和高级用户的欢迎。<hr />    </div>
+        fake-ip 是通过伪造 DNS 返回的 IP 地址让客户端透明代理流量，优点是兼容性好、无需修改应用代理设置；缺点是可能导致某些证书校验或 SNI 伪装失效，需要配合 DNS 与证书策略谨慎使用。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>WinXray 的日志记录如何帮助排错？</h5></div>
@@ -377,19 +362,34 @@ sudo sysctl net.ipv4.tcp_congestion_control=bbr
         WinXray 提供详细的连接日志，包括入站、出站流量信息及错误提示。通过查看日志，用户可以快速定位连接失败、节点不可达或配置错误的原因，提高问题解决效率。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>如何在 Clash Premium 中使用 TUN 模式加速游戏？</h5></div>
+    <div class="panel-body">
+        Clash Premium 版本支持系统级 TUN 模式，可将所有 UDP 流量转发至代理节点。启用该模式后需管理员权限，并在配置文件中添加 dns 与 tun 模块，选择低延迟节点即可实现游戏加速。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>PassWall2 能运行在哪些设备上？</h5></div>
     <div class="panel-body">
         PassWall2 是基于 OpenWRT 的插件，只要路由器支持该固件，就能安装运行。常见型号如小米路由、斐讯、软路由都可以使用，通过 Web 界面操作，适合家庭网络使用场景。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>何为 fake-ip 模式，它的优缺点是什么？</h5></div>
+    <div class="panel-heading"><h5>VLESS + Reality 模式与 TLS 模式有何不同？</h5></div>
     <div class="panel-body">
-        fake-ip 是通过伪造 DNS 返回的 IP 地址让客户端透明代理流量，优点是兼容性好、无需修改应用代理设置；缺点是可能导致某些证书校验或 SNI 伪装失效，需要配合 DNS 与证书策略谨慎使用。<hr />    </div>
+        Reality 模式通过伪造握手和真实网站特征提升隐蔽性，TLS 模式侧重加密和传输效率。Reality 更难被 DPI 检测，适合高封锁环境，TLS 模式在稳定性和速度上更优。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>如何在 Clash Premium 中使用 TUN 模式加速游戏？</h5></div>
+    <div class="panel-heading"><h5>VLESS 的 XTLS 模式能提升传输效率吗？</h5></div>
     <div class="panel-body">
-        Clash Premium 版本支持系统级 TUN 模式，可将所有 UDP 流量转发至代理节点。启用该模式后需管理员权限，并在配置文件中添加 dns 与 tun 模块，选择低延迟节点即可实现游戏加速。    </div>
+        XTLS 模式通过减少冗余加密和握手次数，降低延迟，提高吞吐量。在高并发和短连接场景下，效率明显优于普通 TLS，同时保持数据安全性和隐蔽性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Hiddify Next 如何设置用户带宽与流量配额？</h5></div>
+    <div class="panel-body">
+        管理员可为每个用户单独设置带宽和流量上限。超出限制时，可自动降速或阻止访问，确保服务器资源合理分配，避免单用户占用过多带宽，提高整体网络公平性和效率。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>VMess AEAD 加密在高封锁网络的作用？</h5></div>
+    <div class="panel-body">
+        AEAD 加密可防止数据篡改和流量特征泄露，降低被封锁和 DPI 检测风险。保证节点长期可用，提高数据传输安全性和访问可靠性，优化用户科学上网体验。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -437,16 +437,16 @@ sudo sysctl net.ipv4.tcp_congestion_control=bbr
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/clash-node-github-2026-8-9.htm" title="Clash订阅 - 8月9日19.1M/S|免费Singbox节点/Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Trojan节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 8月9日19.1M/S|免费Singbox节点/Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Trojan节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-6-clash-stash-node.htm" title="Clash订阅 - 7月6日23M/S|免费SSR节点/V2ray节点/Shadowrocket节点/Clash节点/Trojan节点/Singbox节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 7月6日23M/S|免费SSR节点/V2ray节点/Shadowrocket节点/Clash节点/Trojan节点/Singbox节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-6-13-clash-stash.htm" title="Clash订阅 - 6月13日19.8M/S|免费Trojan节点/Clash节点/V2ray节点/Shadowrocket节点/Singbox节点/SSR节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 6月13日19.8M/S|免费Trojan节点/Clash节点/V2ray节点/Shadowrocket节点/Singbox节点/SSR节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-6-30-clash-node-daily-updates.htm" title="Clash订阅 - 6月30日20.8M/S|免费V2ray节点/Singbox节点/Trojan节点/Clash节点/SSR节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 6月30日20.8M/S|免费V2ray节点/Singbox节点/Trojan节点/Clash节点/SSR节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-3-clash-meta-github.htm" title="Clash订阅 - 7月3日22.8M/S|免费Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点/SSR节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 7月3日22.8M/S|免费Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点/SSR节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-4-clash-verge-rev-github.htm" title="Clash订阅 - 8月4日20.1M/S|免费Trojan节点/V2ray节点/Shadowrocket节点/SSR节点/Singbox节点/Clash节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 8月4日20.1M/S|免费Trojan节点/V2ray节点/Shadowrocket节点/SSR节点/Singbox节点/Clash节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-22-clash-node.htm" title="Clash订阅 - 7月22日21M/S|免费Shadowrocket节点/Clash节点/SSR节点/Singbox节点/Trojan节点/V2ray节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 7月22日21M/S|免费Shadowrocket节点/Clash节点/SSR节点/Singbox节点/Trojan节点/V2ray节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-30-clash-node-daily-updates.htm" title="Clash订阅 - 7月30日18.5M/S|免费Trojan节点/Shadowrocket节点/V2ray节点/Singbox节点/SSR节点/Clash节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 7月30日18.5M/S|免费Trojan节点/Shadowrocket节点/V2ray节点/Singbox节点/SSR节点/Clash节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-23-clash-node-github.htm" title="Clash订阅 - 7月23日22M/S|免费Clash节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 7月23日22M/S|免费Clash节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-17-clash-node-github.htm" title="Clash订阅 - 7月17日18.5M/S|免费Trojan节点/SSR节点/Clash节点/Shadowrocket节点/Singbox节点/V2ray节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 7月17日18.5M/S|免费Trojan节点/SSR节点/Clash节点/Shadowrocket节点/Singbox节点/V2ray节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-node-github-2026-8-29.htm" title="Clash订阅 - 8月29日20.7M/S|免费Trojan节点/Singbox节点/V2ray节点/Shadowrocket节点/SSR节点/Clash节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 8月29日20.7M/S|免费Trojan节点/Singbox节点/V2ray节点/Shadowrocket节点/SSR节点/Clash节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-8-clash-node-daily-updates.htm" title="Clash订阅 - 8月8日19.4M/S|免费Shadowrocket节点/V2ray节点/Clash节点/Singbox节点/Trojan节点/SSR节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 8月8日19.4M/S|免费Shadowrocket节点/V2ray节点/Clash节点/Singbox节点/Trojan节点/SSR节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-stash-2026-8-31.htm" title="Clash订阅 - 8月31日19.6M/S|免费Shadowrocket节点/V2ray节点/SSR节点/Singbox节点/Trojan节点/Clash节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 8月31日19.6M/S|免费Shadowrocket节点/V2ray节点/SSR节点/Singbox节点/Trojan节点/Clash节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-stash-2026-8-27.htm" title="Clash订阅 - 8月27日20M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/Clash节点/SSR节点/Trojan节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 8月27日20M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/Clash节点/SSR节点/Trojan节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-stash-2026-8-13.htm" title="Clash订阅 - 8月13日20.5M/S|免费Trojan节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点/SSR节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 8月13日20.5M/S|免费Trojan节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点/SSR节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-10-clash-node-daily-updates.htm" title="Clash订阅 - 8月10日21.5M/S|免费V2ray节点/Clash节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 8月10日21.5M/S|免费V2ray节点/Clash节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-4-clash-verge-rev-github.htm" title="Clash订阅 - 9月4日22.1M/S|免费Clash节点/V2ray节点/Shadowrocket节点/Trojan节点/SSR节点/Singbox节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 9月4日22.1M/S|免费Clash节点/V2ray节点/Shadowrocket节点/Trojan节点/SSR节点/Singbox节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-28-clash-stash-node.htm" title="Clash订阅 - 8月28日18M/S|免费Trojan节点/SSR节点/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 8月28日18M/S|免费Trojan节点/SSR节点/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-v2ray-ss-ssr-2026-8-21.htm" title="Clash订阅 - 8月21日21.9M/S|免费Singbox节点/Clash节点/Shadowrocket节点/Trojan节点/V2ray节点/SSR节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 8月21日21.9M/S|免费Singbox节点/Clash节点/Shadowrocket节点/Trojan节点/V2ray节点/SSR节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-18-clash-node.htm" title="Clash订阅 - 8月18日21.7M/S|免费V2ray节点/Singbox节点/Clash节点/SSR节点/Trojan节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 8月18日21.7M/S|免费V2ray节点/Singbox节点/Clash节点/SSR节点/Trojan节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -458,13 +458,10 @@ sudo sysctl net.ipv4.tcp_congestion_control=bbr
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">11</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
+                <h4><span class="badge" style="float: right;">4</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2026-07/" title="2026-07 归档">2026-07</a></h4>
-            </li>
-                        <li class="py-2">
-                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2026-06/" title="2026-06 归档">2026-06</a></h4>
+                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
             </li>
                     </ul>
     </div>
