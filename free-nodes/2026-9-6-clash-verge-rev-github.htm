@@ -294,9 +294,9 @@ V2Ray设计注重多连接优化和高效资源管理，即使在网络波动较
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 如何在 iPhone 上使用？</h5></div>
+    <div class="panel-heading"><h5>Netch 如何为游戏流量提供加速？</h5></div>
     <div class="panel-body">
-        从 App Store 下载 Surfboard 后，导入 Clash 订阅链接即可使用。Surfboard 提供直观的节点切换和规则管理界面，可查看实时延迟与流量数据，非常适合希望简单上手的 iOS 用户。<hr />    </div>
+        Netch 支持 UDP 转发，可为游戏流量建立高速通道。结合策略组和节点延迟检测，可减少丢包和延迟，保证游戏访问稳定流畅，提高网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>何时应选择 VLess 而非 Vmess？</h5></div>
@@ -304,24 +304,14 @@ V2Ray设计注重多连接优化和高效资源管理，即使在网络波动较
         若追求更轻量、高性能的连接且采用外部 TLS 或 XTLS 进行加密，建议选择 VLess。VLess 去除了内嵌加密，能更好配合现代传输（XTLS/Reality）实现更低延迟与更好扩展性。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 的 Proxy Group 能实现哪些策略？</h5></div>
+    <div class="panel-heading"><h5>Surfboard 如何在 iPhone 上使用？</h5></div>
     <div class="panel-body">
-        Proxy Group 可以定义多种策略，如按延迟选择、随机、轮询或手动选择节点。结合分流规则，可实现针对不同网站或应用的智能代理，提高网络体验。<hr />    </div>
+        从 App Store 下载 Surfboard 后，导入 Clash 订阅链接即可使用。Surfboard 提供直观的节点切换和规则管理界面，可查看实时延迟与流量数据，非常适合希望简单上手的 iOS 用户。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Mellow 的 TUN 模式与系统代理有何区别？</h5></div>
+    <div class="panel-heading"><h5>SSR 节点延迟高、丢包严重，常见排查步骤有哪些？</h5></div>
     <div class="panel-body">
-        TUN 模式直接拦截 IP 层流量，实现全局代理，而系统代理通常仅影响支持代理的应用。TUN 更适合游戏、视频或全局科学上网场景，确保所有流量经过代理节点。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Netch 如何为游戏流量提供加速？</h5></div>
-    <div class="panel-body">
-        Netch 支持 UDP 转发，可为游戏流量建立高速通道。结合策略组和节点延迟检测，可减少丢包和延迟，保证游戏访问稳定流畅，提高网络体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Shadowrocket 的分流规则如何实现广告拦截？</h5></div>
-    <div class="panel-body">
-        通过配置规则，将广告域名或请求路径匹配到黑名单策略，使请求直接阻断或重定向到本地地址。这样用户浏览网页或使用应用时可自动屏蔽大部分广告内容。<hr />    </div>
+        先用 ping 和 traceroute 检查到服务器的延迟与路由跳数；再通过测速工具测带宽并尝试更换不同出站端口或混淆方式；若仍然不稳，考虑更换节点或联系客服查看服务端链路质量。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Mihomo 的日志功能如何调试连接问题？</h5></div>
@@ -334,14 +324,24 @@ V2Ray设计注重多连接优化和高效资源管理，即使在网络波动较
         根据网络环境选择适合的混淆方式，如 tls1.2_ticket_auth 模拟 HTTPS 流量，可隐藏真实特征。结合协议插件使用，可以提高抗封锁能力和节点可用性。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 节点延迟高、丢包严重，常见排查步骤有哪些？</h5></div>
+    <div class="panel-heading"><h5>Mellow 的 TUN 模式与系统代理有何区别？</h5></div>
     <div class="panel-body">
-        先用 ping 和 traceroute 检查到服务器的延迟与路由跳数；再通过测速工具测带宽并尝试更换不同出站端口或混淆方式；若仍然不稳，考虑更换节点或联系客服查看服务端链路质量。<hr />    </div>
+        TUN 模式直接拦截 IP 层流量，实现全局代理，而系统代理通常仅影响支持代理的应用。TUN 更适合游戏、视频或全局科学上网场景，确保所有流量经过代理节点。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Clash 的 Proxy Group 能实现哪些策略？</h5></div>
+    <div class="panel-body">
+        Proxy Group 可以定义多种策略，如按延迟选择、随机、轮询或手动选择节点。结合分流规则，可实现针对不同网站或应用的智能代理，提高网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>VLESS + XTLS 在移动网络下的优势有哪些？</h5></div>
     <div class="panel-body">
-        XTLS 模式减少握手次数和加密开销，适合高延迟或不稳定的移动网络。结合策略组和多节点切换，可提升网页浏览、视频播放和游戏的连接稳定性和流畅度。    </div>
+        XTLS 模式减少握手次数和加密开销，适合高延迟或不稳定的移动网络。结合策略组和多节点切换，可提升网页浏览、视频播放和游戏的连接稳定性和流畅度。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Shadowrocket 的分流规则如何实现广告拦截？</h5></div>
+    <div class="panel-body">
+        通过配置规则，将广告域名或请求路径匹配到黑名单策略，使请求直接阻断或重定向到本地地址。这样用户浏览网页或使用应用时可自动屏蔽大部分广告内容。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -389,16 +389,16 @@ V2Ray设计注重多连接优化和高效资源管理，即使在网络波动较
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/clash-stash-2026-9-7.htm" title="Clash订阅 - 9月7日21.3M/S|免费Shadowrocket节点/Clash节点/Singbox节点/Trojan节点/V2ray节点/SSR节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 9月7日21.3M/S|免费Shadowrocket节点/Clash节点/Singbox节点/Trojan节点/V2ray节点/SSR节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-24-clash-verge-rev-github.htm" title="Clash订阅 - 8月24日19.1M/S|免费Shadowrocket节点/Trojan节点/Clash节点/V2ray节点/SSR节点/Singbox节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 8月24日19.1M/S|免费Shadowrocket节点/Trojan节点/Clash节点/V2ray节点/SSR节点/Singbox节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-6-clash-verge-rev-github.htm" title="Clash订阅 - 9月6日18.7M/S|免费Trojan节点/Shadowrocket节点/V2ray节点/SSR节点/Clash节点/Singbox节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 9月6日18.7M/S|免费Trojan节点/Shadowrocket节点/V2ray节点/SSR节点/Clash节点/Singbox节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-v2ray-ss-ssr-2026-8-21.htm" title="Clash订阅 - 8月21日21.9M/S|免费Singbox节点/Clash节点/Shadowrocket节点/Trojan节点/V2ray节点/SSR节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 8月21日21.9M/S|免费Singbox节点/Clash节点/Shadowrocket节点/Trojan节点/V2ray节点/SSR节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-stash-2026-8-23.htm" title="Clash订阅 - 8月23日21.5M/S|免费Singbox节点/SSR节点/Clash节点/V2ray节点/Trojan节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 8月23日21.5M/S|免费Singbox节点/SSR节点/Clash节点/V2ray节点/Trojan节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-20-free-node-subscribe.htm" title="Clash订阅 - 8月20日22.3M/S|免费Trojan节点/SSR节点/Clash节点/V2ray节点/Singbox节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 8月20日22.3M/S|免费Trojan节点/SSR节点/Clash节点/V2ray节点/Singbox节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-30-free-node-subscribe.htm" title="Clash订阅 - 8月30日19.8M/S|免费Clash节点/Singbox节点/Trojan节点/Shadowrocket节点/V2ray节点/SSR节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 8月30日19.8M/S|免费Clash节点/Singbox节点/Trojan节点/Shadowrocket节点/V2ray节点/SSR节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-14-clash-stash-node.htm" title="Clash订阅 - 8月14日19M/S|免费Trojan节点/Shadowrocket节点/Clash节点/Singbox节点/V2ray节点/SSR节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 8月14日19M/S|免费Trojan节点/Shadowrocket节点/Clash节点/Singbox节点/V2ray节点/SSR节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-6-clash-stash-node.htm" title="Clash订阅 - 8月6日18.7M/S|免费SSR节点/V2ray节点/Shadowrocket节点/Clash节点/Singbox节点/Trojan节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 8月6日18.7M/S|免费SSR节点/V2ray节点/Shadowrocket节点/Clash节点/Singbox节点/Trojan节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-8-clash-node.htm" title="Clash订阅 - 9月8日21.5M/S|免费Trojan节点/Clash节点/Singbox节点/Shadowrocket节点/SSR节点/V2ray节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 9月8日21.5M/S|免费Trojan节点/Clash节点/Singbox节点/Shadowrocket节点/SSR节点/V2ray节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-16-clash-stash-node.htm" title="Clash订阅 - 8月16日23M/S|免费Singbox节点/Shadowrocket节点/Trojan节点/SSR节点/V2ray节点/Clash节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 8月16日23M/S|免费Singbox节点/Shadowrocket节点/Trojan节点/SSR节点/V2ray节点/Clash节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/clash-node-github-2026-8-9.htm" title="Clash订阅 - 8月9日19.1M/S|免费Singbox节点/Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Trojan节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 8月9日19.1M/S|免费Singbox节点/Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Trojan节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-v2ray-ss-ssr-2026-8-17.htm" title="Clash订阅 - 8月17日23M/S|免费SSR节点/Clash节点/Shadowrocket节点/Trojan节点/V2ray节点/Singbox节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 8月17日23M/S|免费SSR节点/Clash节点/Shadowrocket节点/Trojan节点/V2ray节点/Singbox节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-18-clash-node.htm" title="Clash订阅 - 8月18日21.7M/S|免费V2ray节点/Singbox节点/Clash节点/SSR节点/Trojan节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 8月18日21.7M/S|免费V2ray节点/Singbox节点/Clash节点/SSR节点/Trojan节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-v2ray-ss-ssr-2026-8-21.htm" title="Clash订阅 - 8月21日21.9M/S|免费Singbox节点/Clash节点/Shadowrocket节点/Trojan节点/V2ray节点/SSR节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 8月21日21.9M/S|免费Singbox节点/Clash节点/Shadowrocket节点/Trojan节点/V2ray节点/SSR节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-node-github-2026-8-7.htm" title="Clash订阅 - 8月7日21.7M/S|免费SSR节点/Trojan节点/Shadowrocket节点/Clash节点/V2ray节点/Singbox节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 8月7日21.7M/S|免费SSR节点/Trojan节点/Shadowrocket节点/Clash节点/V2ray节点/Singbox节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-12-clash-verge-rev-github.htm" title="Clash订阅 - 9月12日22.5M/S|免费Clash节点/Singbox节点/V2ray节点/Shadowrocket节点/SSR节点/Trojan节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 9月12日22.5M/S|免费Clash节点/Singbox节点/V2ray节点/Shadowrocket节点/SSR节点/Trojan节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-4-clash-verge-rev-github.htm" title="Clash订阅 - 9月4日22.1M/S|免费Clash节点/V2ray节点/Shadowrocket节点/Trojan节点/SSR节点/Singbox节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 9月4日22.1M/S|免费Clash节点/V2ray节点/Shadowrocket节点/Trojan节点/SSR节点/Singbox节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-10-clash-node-daily-updates.htm" title="Clash订阅 - 8月10日21.5M/S|免费V2ray节点/Clash节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐">Clash订阅 - 8月10日21.5M/S|免费V2ray节点/Clash节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -410,7 +410,7 @@ V2Ray设计注重多连接优化和高效资源管理，即使在网络波动较
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">8</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
+                <h4><span class="badge" style="float: right;">15</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
