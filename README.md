@@ -1,4 +1,4 @@
-# Clash订阅 - 9月29日20.2M/S|免费SSR节点/V2ray节点/Singbox节点/Clash节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐  更新时间 2026-09-29 10:29:46
+# Clash订阅 - 10月6日18M/S|免费Clash节点/Singbox节点/SSR节点/Shadowrocket节点/V2ray节点节点推荐，V2ray梯子购买推荐  更新时间 2026-10-06 10:08:59
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://clashdingyue.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### 免费Clash节点订阅链接
 
-- https://clashdingyue.github.io/uploads/2026/09/0-20260929.yaml
-- https://clashdingyue.github.io/uploads/2026/09/1-20260929.yaml
-- https://clashdingyue.github.io/uploads/2026/09/2-20260929.yaml
-- https://clashdingyue.github.io/uploads/2026/09/3-20260929.yaml
-- https://clashdingyue.github.io/uploads/2026/09/4-20260929.yaml
+- https://clashdingyue.github.io/uploads/2026/10/0-20261006.yaml
+- https://clashdingyue.github.io/uploads/2026/10/1-20261006.yaml
+- https://clashdingyue.github.io/uploads/2026/10/2-20261006.yaml
+- https://clashdingyue.github.io/uploads/2026/10/3-20261006.yaml
+- https://clashdingyue.github.io/uploads/2026/10/4-20261006.yaml
 
 ### 免费V2ray节点订阅链接
 
-- https://clashdingyue.github.io/uploads/2026/09/0-20260929.txt
-- https://clashdingyue.github.io/uploads/2026/09/1-20260929.txt
-- https://clashdingyue.github.io/uploads/2026/09/2-20260929.txt
-- https://clashdingyue.github.io/uploads/2026/09/3-20260929.txt
-- https://clashdingyue.github.io/uploads/2026/09/4-20260929.txt
+- https://clashdingyue.github.io/uploads/2026/10/0-20261006.txt
+- https://clashdingyue.github.io/uploads/2026/10/1-20261006.txt
+- https://clashdingyue.github.io/uploads/2026/10/2-20261006.txt
+- https://clashdingyue.github.io/uploads/2026/10/3-20261006.txt
+- https://clashdingyue.github.io/uploads/2026/10/4-20261006.txt
 
 ### 免费Sing-box节点订阅链接
 
-- https://clashdingyue.github.io/uploads/2026/09/20260929.json
+- https://clashdingyue.github.io/uploads/2026/10/20261006.json
 
 ## 更多Clash节点订阅 ：
 
